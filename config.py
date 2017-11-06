@@ -1,6 +1,6 @@
 import os
 
-class Congig:
+class Config:
 	'''
 	parent configuration class
 	'''
