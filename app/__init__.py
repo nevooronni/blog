@@ -8,6 +8,7 @@ from flask_simplemde import simpleMDE#extension that helps flask intergrate simp
 
 #initializing flask extension
 bootstrap = Bootstrap()
+db = SQLAlchemy()
 
 def create_app(config_name):
 
@@ -19,3 +20,5 @@ def create_app(config_name):
 
 	#initializing bootstrap
 	bootstrap.init_app(app)
+
+	return app
