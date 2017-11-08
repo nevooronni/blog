@@ -1,5 +1,8 @@
 from . import db
 from datetime import datetime
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash,check_password_hash
+
 
 class BlogPost(db.Model):
 	'''
@@ -34,4 +37,5 @@ class BlogPost(db.Model):
 		'''
 		delete_blog = BlogPost.query.filter_by(id=BlogPost_id).delete()
 		db.session.commit()
+
 
